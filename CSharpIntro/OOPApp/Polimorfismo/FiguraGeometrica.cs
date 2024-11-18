@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Polimorfismo
 {
-    public class FiguraGeometrica
+    public class FiguraGeometrica//: object
     {
         public double Alto { get; set; }
         public double Ancho { get; set; }
