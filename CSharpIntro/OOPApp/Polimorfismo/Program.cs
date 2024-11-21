@@ -71,3 +71,13 @@ foreach(var emp in empleados)
 empleados.Remove(2);
 
 var promedio = EstadisticasGenerales.Promedio([123, 456, 789]);
+
+
+ColeccionGenerica<int> numsCol=new ColeccionGenerica<int>();
+numsCol.Agregar(123); nums.Agregar(456); nums.Agregar(789);
+int sumCol = 0;
+foreach(var n in numsCol)
+{
+    sumCol += n;
+}
+var promCol = sumCol / numsCol.Longitud;

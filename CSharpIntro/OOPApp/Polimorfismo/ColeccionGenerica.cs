@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace Polimorfismo
     //2. Agregar la funcional requeridad para que esta coleccion pueda crecer en demanda cuando sea requerido
     //3. Crear una aplicacion de ejemplo que permita calcular estadisticas utilizando esta clase
     //4. Investigar al menos 2 tipos de datos genericos de .Net
-    public class ColeccionGenerica<T>
+    public class ColeccionGenerica<T>: IEnumerable<T>
     {
         private T[] objects;
         private int currentIndex;
@@ -21,6 +22,10 @@ namespace Polimorfismo
         }
         public void Agregar(T obj)
         {
+            if (currentIndex >= this.objects.Length)
+            {
+                Array.Resize(ref objects, this.objects.Length*2);
+            }
             objects[currentIndex++] = obj;
         }
         public int ObtenerIndice(T obj)
@@ -47,6 +52,20 @@ namespace Polimorfismo
         {
             return objects[index];
         }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < this.objects.Length; i++)
+            {
+                yield return this.objects[i];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
         public int Longitud
         {
             get

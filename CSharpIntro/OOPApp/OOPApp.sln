@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegados", "Delegados\Dele
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polimorfismo", "Polimorfismo\Polimorfismo.csproj", "{59DE9CD9-D676-4643-866B-F3DA4B33B4AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estadisticas", "Estadisticas\Estadisticas.csproj", "{FE3D3645-A8D5-4509-A141-CD145A79AAF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estadisticas", "Estadisticas\Estadisticas.csproj", "{FE3D3645-A8D5-4509-A141-CD145A79AAF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepciones", "Excepciones\Excepciones.csproj", "{018EECF3-B174-4497-A1E5-F6009A721F00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FE3D3645-A8D5-4509-A141-CD145A79AAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE3D3645-A8D5-4509-A141-CD145A79AAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE3D3645-A8D5-4509-A141-CD145A79AAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018EECF3-B174-4497-A1E5-F6009A721F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018EECF3-B174-4497-A1E5-F6009A721F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018EECF3-B174-4497-A1E5-F6009A721F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018EECF3-B174-4497-A1E5-F6009A721F00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
