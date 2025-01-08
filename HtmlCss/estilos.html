@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            height: 300px;
+            width: 300px;
+            border: solid 1px;
+            margin: 2px;
+        }
+        h2 {
+            text-align: center;
+            text-decoration: dashed underline;
+            font-style: italic;
+        }
+        .articulo-importante{
+            background-color: lightyellow;
+            border: solid 0.5;
+        }
+        body{
+            margin: 0;
+        }
+    </style>
+    <link href="./estilos-basicos.css" rel="stylesheet">
+</head>
+<body>
+    <!--Estilos en linea-->
+    <header style="border-style: dashed;">
+        <h1 style="color: orange; background-color: darkgrey;">
+            Titulo de la Página</h1>
+    </header>
+    <section id="navegacion">
+        <a href="#" class="bold">Inicio</a>
+        <a href="#">Acerca de</a>
+        <a href="#">Contacto</a>
+    </section>
+    <section>
+        <article>
+            <header class="articulo-importante">
+                <h2 class="bold">Arcticulo 1</h2>
+            </header>
+        </article>
+        <article>
+            <header class="resaltar">
+                <h2>Articulo 2</h2>
+            </header>
+        </article>
+        <article class="articulo-especial">
+            <header>
+                <h2>Articulo Especial</h2>
+            </header>
+        </article>
+    </section>
+</body>
+</html>

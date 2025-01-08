@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Datos de Contratación</legend>
+            <label for="nombre">Nombre:</label>
+            <input name="nombre" placeholder="Escribe el nombre" maxlength="150" required minlength="3" type="text" />
+            <label for="telefono">Teléfono</label>
+            <input type="tel" placeholder="Teléfono" name="telefono" />
+            <label for="aspiracion">Aspiración Salarial:</label>
+            <input type="number" name="aspiracion" max="100000" />
+            <label for="notificar">Recibe Notificaciones</label>
+            <input type="checkbox" name="notificar">
+            <br />
+            <label for="seleccion">Seleccione:</label>
+            <ul>
+                <li>
+                    <input type="radio" value="diseño" name="seleccion"><label>Diseño</label>
+                </li>
+                <li>
+                    <input type="radio" value="ux" name="seleccion"><label>UX</label>
+                </li>
+                <li>
+                    <input type="radio" value="desarollo" name="seleccion"><label>Desarrollo</label>
+                </li>
+            </ul>
+            <label for="departamento">Departamento:</label>
+            <select name="departamento">
+                <option value="01">Atlantida</option>
+                <option value="08">Francisco Morazán</option>
+                <option value="03">Cortés</option>
+            </select><br>
+            <div>
+                <label for="beneficios">Beneficios:</label>
+                <select name="beneficios" multiple>
+                    <option>Plan Medico</option>
+                    <option>Plan Celular</option>
+                    <option>Plan TV</option>
+                    <option>Plan Internet</option>
+                </select>
+            </div>
+            <label for="notas">Notas</label>
+            <textarea name="notas"></textarea>
+            <div>
+                <label for="vehiculo">Vehiculo Asignado:</label>
+                <select name="beneficios">
+                    <optgroup label="Motocicleta">
+                        <option>Yamaha</option>
+                        <option>Suzuki</option>
+                        <option>Otro</option>
+                    </optgroup>
+                    <optgroup label="Electrico">
+                        <option>Scooter</option>
+                        <option>Monopatin</option>
+                        <option>Otro</option>
+                    </optgroup>
+                </select>
+            </div>
+        </fieldset>
+        <input type="submit" value="Guardar" />
+    </form>
+</body>
+
+</html>

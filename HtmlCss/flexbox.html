@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            - Flex container: el elemento padre que contiene los elementos
+                que estaran en un caja flexible
+            - Flex items: los elementos dentro de un flex container
+            - flex-wrap: especifica si el contenedor sera de una linea o multilinea
+            - flex-direction
+            - justify-content
+        */
+        .container-row{
+            height: 110px;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row-reverse;
+        }
+        .container-column{
+            flex-direction: column;
+        }
+        .container div{
+            height: 100%;
+            border: 2px solid;
+            width: 200px;
+        }
+        .container-justified{
+            display: flex;
+            height: 110px;
+            justify-content: space-around;
+        }
+        .container-align-items{
+            margin-top: 10px;
+            height: 200px;
+            border: 2px solid;
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            >div{
+                line-height: 100px;
+                width: 20%;
+                border: 2px solid;
+            }
+        }
+        .hero-section{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .tesla-1{
+            background-color: aqua;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container container-row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <div class="container container-column">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="container container-justified">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="container-align-items">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="hero-section">
+        <div class="tesla-1">
+            tesla 1
+        </div>
+        <div class="tesla-2">
+            tesla 2
+        </div>
+    </div>
+</body>
+</html>

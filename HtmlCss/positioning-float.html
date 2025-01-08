@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        .float-section{
+            clear: both;
+        }
+        .float-section div {
+            height: 200px;
+            width: 200px;
+            border: solid 2px;
+            background-color: blue;
+            font-size: 32px;
+            color: white;
+            float: left;
+        }
+
+        .hero {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 70%;
+            margin: 0px auto;
+            h1 {
+                font-size: 64px;
+                line-height: 69px;
+                margin-top: 0px;
+                margin-bottom: 5px;
+            }
+
+            >p {
+                font-size: 16px;
+                text-align: left;
+            }
+            div{
+                float: left;
+            }
+            .description{
+                width: 60%;
+            }
+            .illustration{
+                width: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="description">
+            <h1>
+                Este es el titulo de mi hero section.
+            </h1>
+            <p>Este es la descripcion corta de mi hero section.</p>
+        </div>
+        <div class="illustration">
+            <img src="./imagenes/rocket-icon-png-21.png" height="300">
+        </div>
+    </section>
+    <section class="float-section">
+        <div>
+            1
+        </div>
+        <div>
+            2
+        </div>
+        <div>
+            3
+        </div>
+    </section>
+</body>
+
+</html>
