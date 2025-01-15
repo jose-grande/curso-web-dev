@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            border: solid 1px;
+            position: relative;
+        }
+
+        .box::before {
+            position: absolute;
+            content: '1';
+            border: solid 1px red;
+            transform: translate(-5px, -5px);
+            height: 100px;
+            width: 100px;
+        }
+
+        .box::after {
+            position: absolute;
+            content: '2';
+            border: solid 1px blue;
+            transform: translate(5px, 5px);
+            height: 100px;
+            width: 100px;
+        }
+
+        .box:hover {
+            cursor: pointer;
+            background: radial-gradient(circle, #fcfcfc 0%, #3c3cff 100%)
+        }
+
+        article>p::first-letter {
+            font-size: large;
+            font-weight: bolder;
+            color: #3c3cff;
+        }
+
+        article h2:first-child {
+            border-bottom: solid 1px black;
+        }
+
+        p::selection {
+            background-color: yellow;
+        }
+
+        .dropdown {
+            width: 200px;
+            .dropdown-content {
+                display: none;
+                padding: 4px;
+                box-shadow: 0px 5px 5px 0px #00000055;
+                background-color: #5858b6;
+                >a{
+                    display: block;
+                    color: white;
+                    text-decoration: none;
+                    
+                }
+            }
+        }
+        .dropdown:hover{
+            .dropdown-content {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <article>
+        <h2>Lorem Ipsum</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac metus ut lacus varius efficitur a quis
+            dolor. Nulla ut orci non mi ultrices ultricies eu egestas nulla. Proin sit amet accumsan erat. Orci varius
+            natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec iaculis pretium laoreet.
+            Pellentesque diam purus, ornare eu nunc et, malesuada tempor elit. Nulla viverra eros sit amet urna
+            hendrerit ultricies. Vivamus consectetur massa arcu, in pharetra orci eleifend eu. Pellentesque vehicula
+            nulla metus, nec finibus ligula consectetur in. Etiam at quam lacus.
+        </p>
+    </article>
+    <div class="dropdown">
+        <button>Menu</button>
+        <div class="dropdown-content">
+            <a href="#">Opcion 1</a>
+            <a href="#">Opcion 2</a>
+            <a href="#">Opcion 3</a>
+        </div>
+    </div>
+</body>
+
+</html>

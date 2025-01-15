@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --main-bg: #ececec;
+            /* flex grow for nav section */
+            --menu-flex-grow: 7;
+            --logo-flex-grow: 1.5;
+            --user-reg-flex-grow: 1.5;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--main-bg);
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu {
+            display: flex;
+            flex-grow: var(--menu-flex-grow);
+        }
+
+        .logo {
+            flex-grow: var(--logo-flex-grow);
+        }
+
+        .user-reg {
+            flex-grow: var(--user-reg-flex-grow);
+        }
+
+        .menu ul {
+            display: flex;
+            /* border: solid 1px red; */
+            width: 100%;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .menu li {
+            display: inline;
+            /* border: solid 1px; */
+        }
+
+        .main-nav>div {
+            /* border: solid 1px; */
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 80%;
+            margin: auto;
+            align-items: center;
+        }
+
+        .hero .description {}
+
+        .hero .description h1 {
+            font-size: 48px;
+            margin: 0px 5px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            .hero {
+                display: flex;
+                flex-direction: row;
+                width: 80%;
+                margin: auto;
+                align-items: center;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .menu {
+                display: none;
+            }
+
+            .user-reg {
+                display: none;
+            }
+        }
+
+        @media(prefers-color-scheme: dark){
+            :root{
+                --main-bg: #ececec;
+            }
+            
+            body{
+                background-color: black;
+                color: white;
+            }
+        }
+        @media(prefers-color-scheme: light){
+            :root{
+                --main-bg: #ececec;
+            }
+            body{
+                /* background-color: black;
+                color: white; */
+            }
+        }
+        .gallery{
+            column-count: 3;
+            column-width: 220px;
+            column-gap: 5px;
+            >img{
+                width: 200px;
+                margin: auto;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="./imagenes/rocket-logo.jpeg" height="64px">
+        </div>
+        <div class="menu">
+            <ul>
+                <li>Home</li>
+                <li>Acerca</li>
+                <li>Ayuda</li>
+                <li>Registrarse</li>
+            </ul>
+        </div>
+        <div class="user-reg">
+            <a href="#">Registrarse</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="description">
+            <h1>
+                Este es el titulo de mi hero section.
+            </h1>
+            <p>Este es la descripcion corta de mi hero section.</p>
+            <a href="#">Call to action</a>
+        </div>
+        <div class="illustration">
+            <img src="./imagenes/rocket-icon-png-21.png" height="300">
+        </div>
+    </section>
+    <div class="gallery">
+        <img src="imagenes/Atardecer.jpg" alt="Atardecer">
+        <img src="imagenes/Atardecer.jpg" alt="Atardecer">
+        <img src="imagenes/Atardecer.jpg" alt="Atardecer">
+        <img src="imagenes/Atardecer.jpg" alt="Atardecer">
+        <img src="imagenes/Atardecer.jpg" alt="Atardecer">
+    </div>
+</body>
+
+</html>

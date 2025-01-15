@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner {
+            height: 50px;
+            width: 150px;
+            border: solid 1px;
+        }
+
+        .banner:hover {
+            transform: scale(1.5, 1.5) translate(50px, 50px) rotate(90deg);
+            transition: all 500ms ease-in;
+            /*transition: height 500ms, width 500ms, transform 500ms;*/
+        }
+
+        .card {
+            min-height: 100px;
+            width: 100px;
+            margin-top: 10px;
+            background-color: yellow;
+            transform: rotateZ(45deg) rotateY(20deg);
+            transition: all 500ms;
+            transition-delay: 1s;
+        }
+
+        .hero {
+            max-width: 100%;
+            perspective: 10px;
+
+            >img {
+                width: 100%;
+
+                position: absolute;
+            }
+        }
+
+        .parent-3d {
+            width: 50%;
+            padding: 5px;
+            perspective: 250px;
+        }
+
+        .child {
+            height: 50px;
+            width: 50px;
+            border: solid 1px;
+            margin: 2px;
+            transform: rotateX(30deg);
+        }
+
+        #div-animado {
+            height: 100px;
+            width: 100px;
+            border: solid 1px;
+            margin: 5px;
+            /* animation: changing-bg 1s ease-in; */
+            animation-name: changing-bg;
+            animation-duration: 4s;
+            animation-delay: 1s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            /* none, forward, backward, both*/
+        }
+        .parent{
+            perspective: 500px;
+            transform-style: preserve-3d;
+        }
+        @keyframes changing-bg {
+            0% {
+                background-color: white;
+                transform: rotateY(36deg) ;
+            }
+
+            25% {
+                background-color: red;
+                transform: rotateY(72deg) ;
+            }
+
+            50% {
+                background-color: green;
+                transform: rotateY(108deg) ;
+            }
+
+            75% {
+                background-color: blue;
+                transform: rotateY(140deg) ;
+            }
+
+            100% {
+                background-color: yellow;
+                transform: rotateY(180deg) ;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="hero">
+        <img src="./imagenes/river.jpeg" alt="">
+    </div> -->
+    <div class="banner">
+        Transformar
+    </div>
+    <div class="card">
+        Info
+    </div>
+    <div class="parent-3d">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <div class="parent">
+        <div id="div-animado">
+
+        </div>
+    </div>
+</body>
+
+</html>
