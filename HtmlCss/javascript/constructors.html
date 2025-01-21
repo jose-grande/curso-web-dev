@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Constructores son funciones que permiten crear tipos de objetos */
+        function imprimirPropiedades(obj){
+            let resultado="Propiedades del Objeto \n";
+            for(let prop in obj){
+                resultado += prop + "\n"
+            }
+            console.log(resultado);
+        }
+        function persona(nombre, apellido){
+            this.nombre=nombre;
+            this.apellido=apellido;
+            this.fechaIngreso=new Date();
+            this.correo=null;
+        }
+        persona.prototype.nombreCompleto=function(){
+            return `${this.nombre} ${this.apellido}`;
+        }
+        let per1=new persona("Maria","Mercedes");
+        let per2=new persona("Juan","Valdez");
+        per2.fechaIngreso=new Date();
+
+        console.log(`Nombre: ${per1.nombre}; Apellido: ${per1.apellido}`);
+        per1.fechaNacimiento=new Date(1995,4,15);
+
+        console.log("Per 1")
+        imprimirPropiedades(per1);
+        console.log("Per 2")
+        imprimirPropiedades(per2);        
+    </script>
+</body>
+</html>

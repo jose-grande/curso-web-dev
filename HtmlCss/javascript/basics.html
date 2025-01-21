@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //este es un comentario de una sola linea
+        /*
+        Las variables declaradas con la palabra clave var, pertenecen al objeto window
+        */
+        var numero=10;
+        alert("El valor de la variable numero es: " + numero);
+        let mensaje='Este es un mensaje';
+        console.log(window.numero)
+        console.log(mensaje)
+        //console.log(window.mensaje);
+        const resultado="resultado de la ejecucion";
+        //esta linea genera el error: Assignment to constant variable
+        //resultado=resultado+"";
+        //alert(nombre); // esta linea genera un error debido a que la variable nombre aun no existe
+        //DOM: Document Object Model
+        /*
+        Operadores Aritmeticos
+        +  -> suma
+        -  -> resta
+        *  -> multiplicacion
+        /  -> division
+        %  -> modulo
+        ++ -> incremento
+        -- -> decremento
+        ** -> exponente (x al cuadrado: x**2)
+        */
+       let a=45, b=55, c;
+       c=a+b;
+       c++;
+       c--;
+       /*
+       Operadores de asignacion
+       += -> x=x+1 equivalente x+=1
+       -= -> -> x=x-1 equivalente x-=1
+       *= -> -> x=x*1 equivalente x*=1
+       /= -> x=x/1 equivalente x/=1
+       */
+
+       /*
+       Tipos de datos:
+       - string
+       - number
+       - bigint
+       - boolean
+       - undefined
+       - null
+       - object
+       - symbol
+       */
+      let str1="ABCDE"
+      let str2='ZYX';
+      let numero_1=321654.21;
+      let identificador=BigInt(123654987654);
+      let respuesta=true; //false
+      let z; // undefined
+      if(z===undefined){
+        console.log("z===undefined")
+      }
+      let w=null;
+      const sym1=Symbol("nuevo_simbolo");
+      console.log(sym1);
+      /*
+      operadores de comparación
+      >   -> mayor que
+      <   -> menor que
+      >=  -> mayor o igual
+      <=  -> menor o igual
+      !=  -> distinto de
+      !   -> negacion
+      ==  -> igual
+      === -> compara la igualdad de el valor y el tipo
+      */
+
+      function sumar(num1, num2){
+        let resultado;
+        resultado=num1+num2;
+        console.log(arguments);
+        return resultado;
+      }
+      function imprimir(nombre){
+        document.write("Bienvenido " + nombre);
+      }
+      let resultado_suma=sumar(50,45);
+      imprimir("Antonio");
+
+      /* Objetos */
+
+      let persona={
+        nombre:"Juan",
+        apellido:"Valdez",
+        edad:1,
+        año_nacimiento:function(){
+            return 2225-this.edad;
+        },
+        recibe_notificaciones:true
+      }
+      console.log(persona);
+      console.log("El año de nacimiento de " + persona.nombre + " es " + persona.año_nacimiento())
+      
+      let empleado=new Object();
+      empleado.salario=1000;
+      empleado.identificador="ABC-01";
+      empleado.seguro_dental=true;
+      empleado.calcular_seguro=function(){
+        let resultado=380;
+        if(this.seguro_dental){
+            resultado+=200;
+        }
+        return resultado;
+      }
+      console.log(empleado);
+      console.log("el seguro del empleado " + empleado.identificador + " es " + empleado.calcular_seguro());
+
+      let contacto={
+        nombre:"Julia",
+        apellido:"Amador",
+        telefono:"55555-555555",
+        edad:25,
+        direccion:{
+            calle:"principal",
+            bloque:12,
+            colonia:"Nueva"
+        }
+      };
+      // Los objetos son mutables
+      contacto.nombre_completo=function(){
+        return this.nombre + " " + this.apellido;
+      }
+      delete contacto.edad;
+      //console.log(contacto.nombre + ' ' + contacto.apellido);
+      // sintaxis equivalente
+      console.log(contacto["nombre"] + ' ' + contacto["apellido"]);
+      for(let prop in contacto){
+        console.log(prop + ": " + contacto[prop]);
+      }
+      /* 
+        JavaScript Object Notation (JSON)
+      */
+      document.write(JSON.stringify(contacto));
+
+      let objeto_json='{"propiedad1":"valor 1","propiedad2":"valor 2"}';
+      
+      let objeto_js=JSON.parse(objeto_json);
+      console.log(objeto_js);
+    </script>
+</head>
+<body>
+    <h1>Titulo de la Pagina</h1>
+    <p>Contenido de la pagina</p>
+    <button>Contactar</button>
+    <script>
+        var nombre="Ana";
+        alert(nombre);
+    </script>
+</body>
+</html>

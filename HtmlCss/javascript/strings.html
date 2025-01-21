@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let texto1="ABCDEFGHIJKLMNÑOPQRSTUVXYZ";
+        let texto2='ABCDEFGHIJKLMNÑOPQRSTUVXYZ';
+        let texto3=`ABCDEFGHIJKLMNÑOPQRSTUVXYZ`;
+        console.log("type of texto1=" + typeof texto1);
+        console.log("type of texto2=" + typeof texto2);
+        console.log("type of texto3=" + typeof texto3);
+
+        if(typeof texto1 ==="string"){
+            console.log(`logitud: ${texto1.length}`);
+            console.log(`charAt(5): ${texto1.charAt(14)}`);
+            console.log(`charAt(5): ${texto1.charCodeAt(14)}`);
+            for (let index = 0; index < 5; index++) {
+                console.log(texto1[index])
+            }
+            let lastLetters=texto1.slice(19);
+            console.log(lastLetters);
+            let firstLetters=texto1.slice(-26,-20);
+            console.log(firstLetters);
+            console.log(texto1.substring(5,10));
+            console.log(texto1.substr(5,10));
+            console.log(texto1.toLowerCase()); // toUpperCase
+        }
+        let nombre="  Carlos Tercero";
+        console.log(nombre);
+        console.log(nombre.trim());
+
+        /* Encontrar texto */
+        let frase="El zorro rojo busca comida en el bosque";
+        console.log(frase.indexOf("comida"));
+        console.log(frase.search("rojo"));
+        console.log(frase.match("rojo"));
+        console.log(frase.matchAll("rojo"));
+        console.log(frase.startsWith("El"));
+        console.log(frase.endsWith("El"))
+        
+
+    </script>
+</body>
+</html>
